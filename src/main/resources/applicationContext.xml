@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="jio" class="org.example.simspring.beans.Sim">
+        <property name="name" value="Jio" />
+        <property name="number" value="9876543210" />
+    </bean>
+
+    <bean id="Airtel" class="org.example.simspring.beans.Sim">
+        <property name="name" value="Airtel" />
+        <property name="number" value="987654345678" />
+    </bean>
+
+    <bean id="engine" class="org.example.simspring.beans.Engine">
+        <property name="power" value="1350cc"/>
+        <property name="fueltype" value="petrol"/>
+    </bean>
+</beans>
