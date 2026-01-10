@@ -62,6 +62,9 @@ public class ProductService {
             return null;
         }
     }
+    public List<Product> filter(int min,int max){
+        return repository.filter(min, max);
+    }
 
 //    public List<Product> getAllProducts(){
 //        ArrayList<Product> list = new ArrayList<>();

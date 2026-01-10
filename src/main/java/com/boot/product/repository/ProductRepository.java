@@ -36,4 +36,7 @@ public class ProductRepository {
     public List<Product> searchByName(String name){
         return list.stream().filter(p -> p.getName().contains(name)).toList();
     }
+    public List<Product> filter(int min, int max){
+        return list.stream().filter(p -> (p.getPrice()>min && p.getPrice()<max)).toList();
+    }
 }

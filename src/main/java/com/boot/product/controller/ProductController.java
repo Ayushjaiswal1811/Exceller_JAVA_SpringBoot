@@ -17,6 +17,9 @@ public class ProductController {
 
     public ProductController(ProductService productService){
         this.service=productService;
+    }@GetMapping("filter")
+    public List<Product> filter(@RequestParam int min,@RequestParam int max){
+    return service.filter(min, max);
     }
 
     @GetMapping("/getAll")
@@ -51,7 +54,6 @@ public class ProductController {
     @PutMapping("/updateById/{id}")
     public ResponseEntity<Product> updateById(@PathVariable int id,@RequestBody Product p){
         try{
-
             return ResponseEntity.ok(service.updateById(id,p));
         } catch (ProductNotFound e) {
             return  ResponseEntity.notFound().build();
